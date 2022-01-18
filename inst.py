@@ -16,6 +16,7 @@ def parse(html):
     publications = match.group(3)
 
     comments = re.findall(r'comment\":{\"count\":(\d+)}', html, re.MULTILINE)
+
     if not comments:
         return None
 
@@ -23,6 +24,7 @@ def parse(html):
     average_comments = sum(comments[:12]) // 12
 
     likes = re.findall(r'liked_by\":{\"count\":(\d+)', html, re.MULTILINE)
+
     if not likes:
         return None
 
