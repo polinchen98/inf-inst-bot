@@ -1,0 +1,6 @@
+venv/
+.idea/
+credits.py
+__pycache__/
+page.html
+test.py
