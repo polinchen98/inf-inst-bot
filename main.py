@@ -29,10 +29,8 @@ def handle_text(message):
     session = requests.session()
 
     response = session.get(instagram_url+nickname, headers=headers)
-    print(response.text)
 
     try:
-        print('try')
         followers, following, publications, average_comments, average_likes = parse(response.text)
         answer = f'• Подписчиков {followers}' + '\n' + f'• Подписок {following}' + \
                  '\n' + f'• Публикаций {publications}' + '\n' \
